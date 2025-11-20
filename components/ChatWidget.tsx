@@ -7,7 +7,8 @@ const CHAT_BACKGROUND_IMAGE = "https://filedn.eu/l2dkKFuRGueFx6uQAnQW97B/site%20
 
 interface ChatWidgetProps {}
 
-const WEBHOOK_URL = 'https://chat.bessacvps.fr/webhook/5e56a263-3a40-44bd-bc9d-1cfb3bc2a87d/chat';
+// Nouvelle URL correcte pour le webhook n8n
+const WEBHOOK_URL = 'https://n8n.bessacvps.fr/webhook/5e56a263-3a40-44bd-bc9d-1cfb3bc2a87d/chat';
 
 const SYSTEM_INSTRUCTIONS = `
 IMPORTANT - RESPECTE STRICTEMENT CES CONSIGNES DE FORMATAGE :
@@ -38,7 +39,7 @@ export const ChatWidget: React.FC<ChatWidgetProps> = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 'welcome-1',
-      text: "Salut ! 👋 Je suis ton Coach E33. Je suis là pour t'aider à cartonner sur ton épreuve de Fidélisation et Relation Client. Pose ta question !",
+      text: "Bonjour ! Je suis ton assistant pédagogique virtuel 🤖.\n\n🔒 Confidentialité :\n\nNos échanges sont utilisés uniquement pour t'aider dans tes révisions.\n\nMerci de ne pas écrire d'informations personnelles (ton nom complet, adresse, mots de passe) dans ce chat.\n\nLes réponses sont générées par une IA et peuvent parfois être imprécises, pense à vérifier avec tes cours !\n\nPose-moi ta question sur le E33 ou la relation client !",
       sender: 'bot',
       timestamp: new Date()
     }
